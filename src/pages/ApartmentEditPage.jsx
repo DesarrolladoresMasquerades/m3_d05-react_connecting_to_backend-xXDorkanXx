@@ -28,7 +28,6 @@ export default function ApartmentEditPage() {
     axios.post(`https://ironbnb-m3.herokuapp.com/apartments/${apartmentId}`, formData)
     .then((response)=>{navigate("/apartments/"+ apartmentId)})
     .catch((error)=>navigate(`/apartments/${apartmentId}/edit`)) //or useState of error and rerender this form with the error updated
-    
   }
 
   return (formData._id ?
@@ -38,10 +37,10 @@ export default function ApartmentEditPage() {
       <form onSubmit={handleSubmit}>
 
         <label>Title</label>
-        <input type="text" name="headline" value={formData.title} onChange={handleDataChange} />
+        <input type="text" name="title" value={formData.title} onChange={handleDataChange} />
 
         <label>Price per Day</label>
-        <input type="number" name="pricePerDay" value={formData.price} onChange={handleDataChange} />
+        <input type="number" name="pricePerDay" value={formData.pricePerDay} onChange={handleDataChange} />
 
         <button type="submit">Save changes</button>
       </form>

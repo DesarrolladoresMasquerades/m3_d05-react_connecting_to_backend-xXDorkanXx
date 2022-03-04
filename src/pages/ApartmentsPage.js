@@ -15,6 +15,7 @@ function ApartmentsPage() {
 
   return (apartments.length ?
     <div>
+      <Link to="/apartments/create"><button>Create new apartment</button></Link>
       <h3>List of apartments</h3>
 
       {apartments.map((apartment) => (
