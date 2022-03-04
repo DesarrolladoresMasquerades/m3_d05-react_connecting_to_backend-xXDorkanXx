@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ApartmentsPage from "./pages/ApartmentsPage";
 //import AddApartmentPage from "./pages/AddApartmentPage";
 import ApartmentDetailPage from "./pages/ApartmentDetailPage";
+import ApartmentEditPage from "./pages/ApartmentEditPage";
 
 function App() {
   return (

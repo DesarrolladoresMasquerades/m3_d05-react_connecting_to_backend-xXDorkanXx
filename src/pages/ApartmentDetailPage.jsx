@@ -1,12 +1,12 @@
-import { useEffect, useState, navigate } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 export default function ApartmentDetailPage(){
     const [apartment, setApartment] = useState({});
 
-    
     const {apartmentId} = useParams();
+    const navigate = useNavigate();
 
     useEffect(()=>{
         axios.get("https://ironbnb-m3.herokuapp.com/apartments/" + apartmentId)
